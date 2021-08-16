@@ -26,3 +26,11 @@ C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\DesktopTodo.csproj.Cor
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\DesktopTodo.csproj.CopyComplete
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\DesktopTodo.exe
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\DesktopTodo.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignColors.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignColors.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\LoginPage.g.cs
+C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\LoginPage.baml
+C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\DesktopTodo.csproj.Fody.CopyLocal.cache

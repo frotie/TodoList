@@ -22,6 +22,7 @@ namespace DesktopTodo
             // Services
             services.AddSingleton<EventBus>();
             services.AddSingleton<MessageBus>();
+            services.AddSingleton<TransitionerHandler>();
 
             // Build provider and check dependencies
             _provider = services.BuildServiceProvider();
