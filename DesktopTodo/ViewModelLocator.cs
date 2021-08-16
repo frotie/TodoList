@@ -1,4 +1,5 @@
-﻿using DesktopTodo.ViewModels;
+﻿using DesktopTodo.Services;
+using DesktopTodo.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace DesktopTodo
             ServiceCollection services = new ServiceCollection();
 
             services.AddTransient<MainViewModel>();
+            services.AddSingleton<EventBus>();
 
             _provider = services.BuildServiceProvider();
             foreach(var service in services)

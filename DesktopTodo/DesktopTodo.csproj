@@ -78,8 +78,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Events\HelloEvent.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Services\EventBus.cs" />
+    <Compile Include="Services\Subcribers.cs" />
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
