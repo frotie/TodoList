@@ -47,3 +47,5 @@ C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Microsoft.Xaml.Behavio
 C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\TodoListPage.g.cs
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\TodoListPage.baml
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Newtonsoft.Json.xml
