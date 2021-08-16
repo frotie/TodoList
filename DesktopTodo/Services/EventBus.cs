@@ -18,7 +18,7 @@ namespace DesktopTodo.Services
 
         public IDisposable Subscribe<TEvent>(Func<TEvent, Task> action) where TEvent : IEvent
         {
-            EventSubscriber sub = new EventSubscriber(typeof(TEvent), e => _subscribers.TryRemove(e, out _));
+            var sub = new EventSubscriber(typeof(TEvent), e => _subscribers.TryRemove(e, out _));
             _subscribers.TryAdd(sub, a => action((TEvent)a));
             return sub;
         }

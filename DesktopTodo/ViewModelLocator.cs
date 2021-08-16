@@ -16,9 +16,14 @@ namespace DesktopTodo
         {
             ServiceCollection services = new ServiceCollection();
 
+            // Viewmodels
             services.AddTransient<MainViewModel>();
-            services.AddSingleton<EventBus>();
 
+            // Services
+            services.AddSingleton<EventBus>();
+            services.AddSingleton<MessageBus>();
+
+            // Build provider and check dependencies
             _provider = services.BuildServiceProvider();
             foreach(var service in services)
             {

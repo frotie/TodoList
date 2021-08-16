@@ -16,15 +16,6 @@ namespace DesktopTodo.ViewModels
         public MainViewModel(EventBus eventBus)
         {
             _eventBus = eventBus;
-            _eventBus.Subscribe<HelloEvent>(async e =>
-            {
-                MessageBox.Show("Hi from EventBus!");
-            });
         }
-
-        public ICommand ClickMe => new RelayCommand(async o =>
-        {
-            await _eventBus.Publish(new HelloEvent());
-        });
     }
 }

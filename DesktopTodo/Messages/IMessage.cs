@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesktopTodo.Events
+namespace DesktopTodo.Messages
 {
-    class HelloEvent : IEvent
+    interface IMessage
     {
     }
 }
