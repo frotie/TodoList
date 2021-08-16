@@ -7,7 +7,10 @@
         xmlns:local="clr-namespace:DesktopTodo"
         DataContext="{Binding MainViewModel, Source={StaticResource ViewModelLocator}}"
         mc:Ignorable="d"
-        Title="Todo list MVVM" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="{Binding WindowState}"
+        Title="Todo list MVVM"
+        Height="450" Width="800"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -15,9 +18,49 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="6" CaptionHeight="30"
+                      GlassFrameThickness="0" 
+                      CornerRadius="0" UseAeroCaptionButtons="False"/>
+    </WindowChrome.WindowChrome>
     <Grid>
-        <md:Transitioner ItemsSource="{Binding TransitionerHandler.Slides}"
-                         SelectedIndex="{Binding TransitionerHandler.SelectedSlide}"
-                         />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--  Custom topbar (default is very bad in my color scheme)  -->
+        <Grid Panel.ZIndex="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Window title for example"
+                       VerticalAlignment="Center"
+                       TextWrapping="NoWrap" Margin="5"/>
+
+            <StackPanel Orientation="Horizontal"
+                        WindowChrome.IsHitTestVisibleInChrome="True"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Stretch">
+                <Button Style="{StaticResource MaterialDesignFlatButton}"
+                        Command="{Binding MinimizeWindow}"
+                        Content="{md:PackIcon Kind=WindowMinimize}"/>
+                <Button Style="{StaticResource MaterialDesignFlatButton}"
+                        Command="{Binding MaximizeWindow}"
+                        Content="{md:PackIcon Kind=WindowMaximize}"/>
+                <Button Style="{StaticResource MaterialDesignFlatButton}"
+                        Command="{Binding CloseWindow}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
+                        Content="{md:PackIcon Kind=WindowClose}"/>
+            </StackPanel>
+        </Grid>
+        
+        
+        <md:Transitioner ItemsSource="{Binding Slides}"
+                         SelectedIndex="{Binding SelectedSlide}"
+                         Grid.RowSpan="2"/>
     </Grid>
 </Window>

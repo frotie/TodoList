@@ -34,3 +34,16 @@ C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignThemes.W
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\LoginPage.g.cs
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\LoginPage.baml
 C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\DesktopTodo.csproj.Fody.CopyLocal.cache
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\ControlzEx.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MahApps.Metro.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\ControlzEx.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\ControlzEx.xml
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MahApps.Metro.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MahApps.Metro.xml
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\MaterialDesignThemes.MahApps.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\user\source\repos\TodoList\DesktopTodo\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\TodoListPage.g.cs
+C:\Users\user\source\repos\TodoList\DesktopTodo\obj\Debug\Views\TodoListPage.baml

@@ -18,11 +18,11 @@ namespace DesktopTodo
 
             // Viewmodels
             services.AddTransient<MainViewModel>();
+            services.AddTransient<LoginViewModel>();
 
             // Services
             services.AddSingleton<EventBus>();
             services.AddSingleton<MessageBus>();
-            services.AddSingleton<TransitionerHandler>();
 
             // Build provider and check dependencies
             _provider = services.BuildServiceProvider();
@@ -33,5 +33,6 @@ namespace DesktopTodo
         }
 
         public MainViewModel MainViewModel => _provider.GetRequiredService<MainViewModel>();
+        public LoginViewModel LoginViewModel => _provider.GetRequiredService<LoginViewModel>();
     }
 }
