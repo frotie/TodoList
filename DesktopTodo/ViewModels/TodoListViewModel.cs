@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesktopTodo.ViewModels
 {
-    class TodoListViewModel : ViewModelBase
+    class TodoListViewModel : ViewModelBase, ITransient
     {
         public ObservableCollection<TodoTask> TodoTasks { get; set; }
         public TodoListViewModel()

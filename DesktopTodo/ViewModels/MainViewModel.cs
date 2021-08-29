@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 namespace DesktopTodo.ViewModels
 {
-    class MainViewModel : ViewModelBase
+    class MainViewModel : ViewModelBase, ITransient
     {
         public WindowState WindowState { get; set; }
         public string Title { get; set; }

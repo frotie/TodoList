@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace DesktopTodo.ViewModels
 {
-    class LoginViewModel : ViewModelBase
+    class LoginViewModel : ViewModelBase, ITransient
     {
         public string ErrorText { get; set; }
         public string Login { get; set; }

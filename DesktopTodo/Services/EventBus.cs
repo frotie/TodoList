@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesktopTodo.Services
 {
-    class EventBus
+    class EventBus : ISingleton
     {
         private readonly ConcurrentDictionary<EventSubscriber, Func<IEvent, Task>> _subscribers;
         public EventBus()

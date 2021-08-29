@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 namespace DesktopTodo.Services
 {
-    class Config
+    class Config : ISingleton
     {
         private string _sessionKey;
         public string SessionKey 

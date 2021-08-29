@@ -15,7 +15,7 @@ namespace DesktopTodo
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            ViewModelLocator.Init();
+            IoC.Init();
             base.OnStartup(e);
         }
     }

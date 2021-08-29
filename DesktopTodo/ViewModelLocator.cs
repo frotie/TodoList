@@ -11,31 +11,8 @@ namespace DesktopTodo
 {
     class ViewModelLocator
     {
-        private static ServiceProvider _provider;
-        public static void Init()
-        {
-            ServiceCollection services = new ServiceCollection();
-
-            // Viewmodels
-            services.AddTransient<MainViewModel>();
-            services.AddTransient<LoginViewModel>();
-            services.AddTransient<TodoListViewModel>();
-
-            // Services
-            services.AddSingleton<EventBus>();
-            services.AddSingleton<MessageBus>();
-            services.AddSingleton<Config>();
-
-            // Build provider and check dependencies
-            _provider = services.BuildServiceProvider();
-            foreach(var service in services)
-            {
-                _provider.GetRequiredService(service.ServiceType);
-            }
-        }
-
-        public MainViewModel MainViewModel => _provider.GetRequiredService<MainViewModel>();
-        public LoginViewModel LoginViewModel => _provider.GetRequiredService<LoginViewModel>();
-        public TodoListViewModel TodoListViewModel => _provider.GetRequiredService<TodoListViewModel>();
+        public MainViewModel MainViewModel => IoC.Resolve<MainViewModel>();
+        public LoginViewModel LoginViewModel => IoC.Resolve<LoginViewModel>();
+        public TodoListViewModel TodoListViewModel => IoC.Resolve<TodoListViewModel>();
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesktopTodo.Services
 {
-    class MessageBus
+    class MessageBus : ISingleton
     {
         private readonly ConcurrentDictionary<MessageSubscriber, Func<IMessage, Task>> _consumers;
         public MessageBus()
