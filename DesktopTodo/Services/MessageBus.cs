@@ -23,13 +23,13 @@ namespace DesktopTodo.Services
             return message;
         }
 
-        public async Task SendTo<TReceiver>(IMessage message)
+        public void SendTo<TReceiver>(IMessage message)
         {
             var messages = _consumers
                 .Where(c => c.Key.MessageType == message.GetType() && c.Key.ReceiverType == typeof(TReceiver))
                 .Select(c => c.Value(message));
 
-            await Task.WhenAll(messages);
+            Task.WhenAll(messages);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace DesktopTodo.ViewModels
             string password = (pwd as System.Windows.Controls.PasswordBox).Password;
             await Task.Delay(3000);
             // ErrorText = "Неверный логин или пароль";
-            await _eventBus.Publish(new NewPageEvent(new TodoListPage()));
+            _eventBus.Publish(new NewPageEvent(new TodoListPage()));
 
             _isBusy = false;
         }, (pwd) => !_isBusy);

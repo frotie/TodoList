@@ -23,13 +23,13 @@ namespace DesktopTodo.Services
             return sub;
         }
 
-        public async Task Publish<TEvent>(TEvent @event) where TEvent : IEvent
+        public void Publish<TEvent>(TEvent @event) where TEvent : IEvent
         {
             var tasks = _subscribers
                 .Where(c => c.Key.EventType == @event.GetType())
                 .Select(c => c.Value(@event));
 
-            await Task.WhenAll(tasks);
+            Task.WhenAll(tasks);
         }
     }
 }
